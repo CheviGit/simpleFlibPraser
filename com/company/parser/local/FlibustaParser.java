@@ -199,7 +199,6 @@ public class FlibustaParser {
 			}
 		}
 		statistic.printStatistic(true);
-		statistic.closeWriter();
 	}
 
 	/**
@@ -374,7 +373,6 @@ public class FlibustaParser {
 
 		initSeriesForLike();
 
-		statistic.initWriter(tmpDir + LOG_FILE_NAME);
 		if(limit == 0){
 			limit = allBookDescriptions.size();
 		}

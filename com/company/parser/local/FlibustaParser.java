@@ -228,7 +228,6 @@ public class FlibustaParser {
 			if (book.getPreviousResult() != null && book.getPreviousResult().contains(ImportResultEnum.COMPLETE)) {
 				logResult.append(ImportLogEnum.RESULT.getName() + ImportResultEnum.COMPLETE.getName());
 				book.setProcessed(true);
-				statistic.writeInLog(logResult.toString());
 				logResult = null;
 				log.info("book [id={}] complete in previous run", book.getBookId());
 				return;
